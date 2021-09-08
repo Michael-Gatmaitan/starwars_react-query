@@ -1,0 +1,8 @@
+$yellow: #f6e82b;
+
+@mixin fontProp($family, $weight: 400, $size: 16px, $color: #fff) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}

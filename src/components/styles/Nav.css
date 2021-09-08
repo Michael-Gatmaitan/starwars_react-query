@@ -1,0 +1,56 @@
+@font-face {
+  font-family: starjedi;
+  src: url(../../logo_font/Starjedi.ttf);
+}
+
+nav {
+  padding: 12px 32px;
+  background-color: #000;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #f6e82b;
+}
+
+nav .logo .star-wars {
+  font-family: starjedi !important;
+}
+
+nav .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .button-container a {
+  text-decoration: none;
+}
+
+nav .button-container a button {
+  background-color: #f6e82b;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  color: #121212;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=Nav.css.map */
