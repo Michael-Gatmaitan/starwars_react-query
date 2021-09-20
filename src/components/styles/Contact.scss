@@ -1,0 +1,29 @@
+@import '../../mixins.scss';
+
+.contact-container {
+  width: 100%;
+  padding: 24px;
+  background-color: $yellow;
+  border-radius: 12px;
+
+  .header {
+    @include fontProp('Rubik', 700, 42px, #121212);
+  }
+
+  .body-text {
+    padding-top: 12px;
+    @include fontProp('Open sans', 400, 18px, rgba(#121212, 0.84));
+  }
+
+  @include mobile {
+    padding: 12px !important;
+    
+    .header {
+      font-size: 24px !important;
+    }
+
+    .body-text {
+      font-size: 16px !important;
+    }
+  }
+}

@@ -14,6 +14,9 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .logo {
@@ -38,11 +41,7 @@ nav .button-container {
           align-items: center;
 }
 
-nav .button-container a {
-  text-decoration: none;
-}
-
-nav .button-container a button {
+nav .button-container button {
   background-color: #f6e82b;
   cursor: pointer;
   padding: 8px 16px;
@@ -52,5 +51,20 @@ nav .button-container a button {
   color: #fff;
   color: #121212;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 12px;
+  }
+  nav .logo {
+    font-size: 18px !important;
+  }
+  nav .button-container {
+    gap: 6px;
+  }
+  nav .button-container button {
+    padding: 4px 8px;
+  }
 }
 /*# sourceMappingURL=Nav.css.map */

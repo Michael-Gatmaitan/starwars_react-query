@@ -1,4 +1,219 @@
+@import "../../mixins.scss";
+
 .planets {
+  margin: 12px 32px;
   display: grid;
+  grid-template-columns: auto 50%;
+  grid-gap: 24px;
+  grid-template-rows: auto;
+
+  .planet-block-container {
+    overflow: auto;
+    display: grid;
+    grid-gap: 8px;
+    border-radius: 4px;
+    
+    .planet-block-wrapper {
+      display: grid;
+      grid-gap: 12px;
+
+      .planet-block {
+        padding: 12px;
+        background-color: $yellow;
+        border-radius: 12px;
+        transition: 0.1s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($yellow, 7);
+        }
   
+        .planet-name {
+          @include fontProp("Rubik", 700, 24px, #121212);
+          margin-bottom: 4px;
+        }
+  
+        .planet-climate {
+          @include fontProp('Open sans', 500, 16px, rgba(#121212, 0.8));
+          margin-bottom: 2px;
+        }
+        .planet-population {
+          @include fontProp('Open sans', 500, 16px, rgba(#121212, 0.8));
+        }
+      }
+    }
+
+
+    .button-container {
+      display: flex;
+      gap: 8px;
+  
+      button {
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 4px;
+        background-color: #121212;
+        @include fontProp("Open sans", 500, 14px, #fff);
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .click-planets {
+    padding: 24px;
+    background-color: $yellow;
+    border-radius: 24px;
+    display: inline;
+    @include fontProp('Rubik', 700, 48px, #121212);
+  }
+
+  .planet-info-container {
+    border-radius: 12px;
+    background-color: $yellow;
+    display: inline;
+    padding: 24px;
+
+    .header {
+      padding-bottom: 12px;
+      @include fontProp('Rubik', 700, 42px, #121212);
+    }
+
+    .planet-sub-info {
+      display: grid;
+      grid-gap: 12px;
+      
+      .styled-span {
+        display: flex;
+        gap: 8px;
+        align-items: start;
+        @include fontProp('Rubik', 500, 16px, #000);
+
+        .span-title {
+          padding: 6px;
+          background-color: #fff;
+          border-radius: 8px;
+        }
+      }
+
+
+      .blacked {
+        background-color: #121212 !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  @include mobile {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-gap: 12px;
+    margin: 12px 12px;
+
+    .click-planets {
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 24px !important;
+    }
+
+    .planet-block-container {
+      max-height: 400px;
+    }
+
+    .planet-info-container {
+      padding: 12px;
+
+      .header {
+        font-size: 24px !important;
+      }
+    }
+  }
+}
+
+.loading-planets {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 50px;
+
+  .loading-container {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    .circ {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: $yellow;
+      border: solid 3px #121212;
+      border-radius: 50%;
+    }
+
+    .circ-1 {
+      top: 0;
+      left: 0;
+      animation: circAnimation_1 2.5s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+    }
+
+    .circ-2 {
+      top: 0;
+      left: 32px;
+      animation: circAnimation_2 2.5s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+    }
+
+    .circ-3 {
+      top: 32px;
+      left: 32px;
+      animation: circAnimation_3 2.5s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+    }
+
+    .circ-4 {
+      top: 32px;
+      left: 0;
+      animation: circAnimation_4 2.5s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+    }
+
+    @keyframes circAnimation_1 {
+      25% { top: 0; left: 32px; }
+      50% { top: 32px; left: 32px; }
+      75% { top: 32px; left: 0; }
+      100% { top: 0; left: 0; }
+    }
+
+    @keyframes circAnimation_2 {
+      25% { top: 32px; left: 32px; }
+      50% { top: 32px; left: 0; }
+      75% { top: 0; left: 0; }
+      100% { top: 0; left: 32px; }
+    }
+
+    @keyframes circAnimation_3 {
+      25% { top: 32px; left: 0; }
+      50% { top: 0; left: 0; }
+      75% { top: 0; left: 32px; }
+      100% { top: 32px; left: 32px; }
+    }
+
+    @keyframes circAnimation_3 {
+      25% { top: 32px; left: 0; }
+      50% { top: 0; left: 0; }
+      75% { top: 0; left: 32px; }
+      100% { top: 32px; left: 32px; }
+    }
+
+    @keyframes circAnimation_4 {
+      25% { top: 0; left: 0; }
+      50% { top: 0; left: 32px; }
+      75% { top: 32px; left: 32px; }
+      100% { top: 32px; left: 0; }
+    }
+  }
+
+  .loading-text {
+    @include fontProp('Rubik', 500, 16px, #121212);
+  }
 }

@@ -6,3 +6,9 @@ $yellow: #f6e82b;
   font-size: $size;
   color: $color;
 }
+
+@mixin mobile {
+  @media screen and (max-width: 600px){
+    @content;
+  }
+}

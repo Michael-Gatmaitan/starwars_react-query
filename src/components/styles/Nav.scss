@@ -10,6 +10,7 @@ nav {
   box-shadow: 0 4px 8px rgba(#000, 0.12);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .logo {
     @include fontProp('Montserrat', 400, 24px, $yellow);
@@ -24,17 +25,28 @@ nav {
     height: 100%;
     gap: 12px;
     align-items: center;
+    button {
+      background-color: $yellow;
+      cursor: pointer;
+      padding: 8px 16px;
+      @include fontProp('Open sans', 500, 14px);
+      color: #121212;
+      border-radius: 4px;
+    }
+  }
 
-    a {
-      text-decoration: none;
+  @include mobile {
+    padding: 12px;
+
+    .logo {
+      font-size: 18px !important;
+    }
+
+    .button-container {
+      gap: 6px;
 
       button {
-        background-color: $yellow;
-        cursor: pointer;
-        padding: 8px 16px;
-        @include fontProp('Open sans', 500, 14px);
-        color: #121212;
-        border-radius: 4px;
+        padding: 4px 8px;
       }
     }
   }

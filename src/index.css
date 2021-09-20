@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -20,8 +21,15 @@ button, input {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 62px auto;
-      grid-template-rows: 62px auto;
+  -ms-grid-rows: 62px 560px auto;
+      grid-template-rows: 62px 560px auto;
   grid-gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .appBody {
+    -ms-grid-rows: 62px auto auto;
+        grid-template-rows: 62px auto auto;
+  }
 }
 /*# sourceMappingURL=index.css.map */

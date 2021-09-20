@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,oBAAoB,CAAC;EACnB,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,IAAI;CAOV;;ACFC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EDRrC,AAAA,oBAAoB,CAAC;IAMjB,OAAO,EAAE,MAAM;IACf,cAAc,EAAE,MAAM;IACtB,GAAG,EAAE,IAAI;GAEZ",
+    "sources": [
+        "MoreInfo.scss",
+        "../../mixins.scss"
+    ],
+    "names": [],
+    "file": "MoreInfo.css"
+}

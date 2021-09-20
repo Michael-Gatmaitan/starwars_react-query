@@ -1,0 +1,19 @@
+.more-info-container {
+  padding: 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .more-info-container {
+    padding: 0 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+}
+/*# sourceMappingURL=MoreInfo.css.map */
