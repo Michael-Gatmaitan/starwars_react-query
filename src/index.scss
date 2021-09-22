@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
 @import './mixins.scss';
 
 html, body {
@@ -7,10 +7,10 @@ html, body {
 }
 
 body {
-  padding: 0 32px;
+  margin-bottom: 32px;
 
   @include mobile {
-    padding: 0 12px;
+    margin-bottom: 12px;
   }
 }
 

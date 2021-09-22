@@ -15,6 +15,40 @@
     @include fontProp('Open sans', 400, 18px, rgba(#121212, 0.84));
   }
 
+  .icons {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .icon-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+
+      &:hover {
+        .textlink-container {
+          div {
+            color: rgba(#121212, 1) !important;
+          }
+        }
+      }
+
+      .icon-container {
+        display: flex;
+        place-items: center;
+      }
+
+      .textlink-container {
+        div {
+          @include fontProp('Open sans', 700, 18px, rgba(#121212, 0.85));
+          transition: 0.05s ease-in;
+        }
+      }
+    }
+  }
+
   @include mobile {
     padding: 12px !important;
     
